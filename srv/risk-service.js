@@ -14,7 +14,7 @@ module.exports = cds.service.impl(async function () {
    this.after("READ", Risks, (data) => {
       const risks = Array.isArray(data) ? data : [data];
 
-      console.log("Hello world...");
+      console.log("Hello world......");
       risks.forEach((risk) => {
          if (risk.impact >= 100000) {
             risk.criticality = 1;

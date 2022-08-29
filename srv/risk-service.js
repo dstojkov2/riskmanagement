@@ -2,7 +2,7 @@
 const cds = require("@sap/cds");
 
 /**
- * The service implementation with all web service handlers
+ * The service implementation with all service handlers
  */
 module.exports = cds.service.impl(async function () {
    // Define constants for the Risk and BusinessPartners entities from the risk-service.cds file
@@ -14,6 +14,7 @@ module.exports = cds.service.impl(async function () {
    this.after("READ", Risks, (data) => {
       const risks = Array.isArray(data) ? data : [data];
 
+      console.log("Hello world");
       risks.forEach((risk) => {
          if (risk.impact >= 100000) {
             risk.criticality = 1;

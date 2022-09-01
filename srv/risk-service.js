@@ -61,6 +61,7 @@ module.exports = cds.service.impl(async function () {
          ({ expand, ref }) => expand && ref[0] === "bp"
       );
       console.log(req.query.SELECT.columns);
+      console.log("a minor change");
       if (expandIndex < 0) return next();
 
       req.query.SELECT.columns.splice(expandIndex, 1);

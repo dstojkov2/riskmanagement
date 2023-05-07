@@ -3,6 +3,7 @@ const cds = require("@sap/cds");
 
 /**
  * The service implementation with all service handlers
+ * additional line
  */
 module.exports = cds.service.impl(async function () {
    // Define constants for the Risk and BusinessPartners entities from the risk-service.cds file
